@@ -1,8 +1,9 @@
-import react, { useState } from "react";
+import  { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import Content from "./Content";
 import Note from "./Note";
+// import Content from "./content";
+import Createcontent from "./Createcontent";
 
 
 function App() {
@@ -22,9 +23,9 @@ function App() {
 
     }
     
-    return <div>
+    return <div className="app">
          <Header/>
-        <Content addNote={AddNote}/>
+        <Createcontent addNote={AddNote}/>
        <div className="container-fluid"> {notes.map((note,index)=>{
             return (<Note 
                  key={index}
